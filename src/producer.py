@@ -25,7 +25,7 @@ from typing import Callable, List, NoReturn
 from settings import settings
 # from src import settings
 from logger import get_logger
-# from models import CommonDocument
+from models import CommonDocument
 from tools import NewsFetcher # type: ignore
 
 logger = get_logger(__name__)

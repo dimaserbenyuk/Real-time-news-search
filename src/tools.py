@@ -82,7 +82,7 @@ class NewsFetcher:
     def __init__(self):
         self._newsapi = NewsApiClient(api_key=settings.NEWSAPI_KEY)
         self._newsdataapi = NewsDataApiClient(apikey=settings.NEWSDATAIO_KEY)
-        self._time_window_h = 24  # Fetch news once a day
+        self._time_window_h = 36  # Fetch news once a day
 
     @handle_article_fetching
     def fetch_from_newsapi(self) -> List[Dict]:
@@ -91,7 +91,7 @@ class NewsFetcher:
             q=settings.NEWS_TOPIC,
             language="en",
             # page=20,
-            page_size=70#settings.ARTICLES_BATCH_SIZE,
+            page_size=60#settings.ARTICLES_BATCH_SIZE,
         )
         return [
             NewsAPIModel(**article).to_common()

@@ -63,3 +63,14 @@ Metadata for all topics (from broker -1: sasl_ssl://pkc-n3603.us-central1.gcp.co
     partition 3, leader 5, replicas: 5,0,4, isrs: 5,0,4
     partition 4, leader 0, replicas: 0,4,2, isrs: 0,4,2
     partition 5, leader 4, replicas: 4,2,3, isrs: 4,2,3
+
+
+confluent kafka topic consume topic_0 --from-beginning --api-key ... --api-secret ... | jq .
+
+
+confluent kafka cluster list                           
+  Current |     ID     |   Name    | Type  | Cloud |   Region    | Availability | Network | Status  
+----------+------------+-----------+-------+-------+-------------+--------------+---------+---------
+  *       | lkc-mxk2pw | cluster_0 | BASIC | gcp   | us-central1 | single-zone  |         | UP      
+
+confluent login

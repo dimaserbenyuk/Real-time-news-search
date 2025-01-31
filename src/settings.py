@@ -2,7 +2,7 @@
 
 from pydantic_settings import SettingsConfigDict, BaseSettings
 import os
-
+import openai
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 

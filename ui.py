@@ -13,9 +13,9 @@ from io import BytesIO
 import requests
 import streamlit as st
 from PIL import Image
-# from src.embeddings import TextEmbedder
+from src.embeddings import TextEmbedder
 from src.settings import settings
-# from src.cleaners import clean_full
+from src.cleaners import clean_full
 from upstash_vector import Index
 
 v_index = Index(url=settings.UPSTASH_VECTOR_ENDPOINT, token=settings.UPSTASH_VECTOR_KEY)
